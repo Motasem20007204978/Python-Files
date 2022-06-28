@@ -1,0 +1,14 @@
+convert .py to .exe:
+
+-must download pyinstaller via pip "pip install pyinstaller" in cmd
+
+open terminal in this path: "your\path\to\python\Python\Python39\Scripts"
+
+-by clicking "shift+right-click" and "open powershell window"
+
+add this command ==> (.\pyinstaller -w -F --noconfirm --console --onefile --upx-dir=C:\upx-3.96-win64 'path/to/file_name.py')
+
+-must download upx from 'https://upx.github.io/' and puth put it in specific path as 'C:\upx-3.96-win64' to call it
+
+then you can found the exe file in path "your\path\to\python\Python\Python39\Scripts\dist"
+

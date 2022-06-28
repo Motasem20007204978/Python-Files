@@ -1,0 +1,11 @@
+run python files immediately by batch:
+
+1-add these commands in file.txt:
+
+@echo off
+"path\to\python.exe" "path\to\file_name.py"
+pause
+
+2-change .txt extension to .bat extension from 'rename'.
+
+-you can run it immediately by open batch file as you run it in terminal 
