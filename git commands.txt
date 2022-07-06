@@ -1,0 +1,33 @@
+git --version
+echo "----------------------------------------------------"
+
+// to gonfig the git user name and email
+git config --global user.name "Your Name"
+git config --global user.email "your email"
+
+// to initializr a new git repository
+git init
+// must be in the project directory
+
+// to check the status of the git repository
+// shows the uncommitted files and untracked files and the branches
+git status
+// must be in the project directory
+
+//to add a file to the staging area
+git add <file> 
+or 
+git add . // to add all files in the project
+or
+git add -A // to add all files in the project and subdirectories
+or
+git add -u // to add all untracked files
+or
+git add -Au // to add all files in the project and subdirectories and untracked files
+or
+git add --all // to add all files in the project and subdirectories
+
+//push the changes to the remote repository
+git commit -m "message"
+
+
