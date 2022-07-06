@@ -4,16 +4,23 @@ git --version // git version
 git config --global user.name "Your Name"
 git config --global user.email "your email"
 
+//////////////be in the directory you want to commit to////////////
 
-// to initializr a new git repository
+// to initializr a new local git repository
 git init
+
+// to connect to a remote git repository after initializing a local one
+git remote add origin <url>
+
+// to clone a git repository without init command
+git clone <url> // i can make changes without to the server
 
 // to show the current branch
 git branch
 
 // to check the status of the git repository
 // shows the uncommitted files and untracked files and the branches
-git status
+git status  
 // show short status of the git repository
 git status -s
 // M to show the modified files
@@ -39,7 +46,8 @@ git add -Au // to add all files in the project and subdirectories and untracked 
 git commit -m "message"
 
 // to push the changes to the remote repository
-git push origin <branch>
+git push -u origin <branch> // -u to update the remote branch
 
 // how to show history of the commits
 git log
+
