@@ -16,7 +16,7 @@ class Singleton:
             print('-->instantiate for first time<--')
             __class__.__instance__ = __class__()
 
-    @classmethod
+    # @classmethod
     @staticmethod
     def getInstance():  # protected called from class and object in same package
 
