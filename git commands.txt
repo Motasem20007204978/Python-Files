@@ -15,20 +15,6 @@ git remote add origin <url>
 // to clone a git repository without init command
 git clone <url> // i can make changes without to the server
 
-// to show the current branch
-git branch
-
-// to check the status of the git repository
-// shows the uncommitted files and untracked files and the branches
-git status  
-// show short status of the git repository
-git status -s
-// M to show the modified files
-// A to show the added files
-// D to show the deleted files
-// U to show the untracked files
-// ? to show the unmerged files
-// ! to show the ignored files
 
 //to add a file to the staging area
 git add <file> 
@@ -42,8 +28,35 @@ git add -u // to add all untracked files
 or
 git add -Au // to add all files in the project and subdirectories and untracked files
 
-//push the changes to the remote repository
+//to remove a file from the staging area
+git rm <file>
+or
+git rm . // to remove all files in the project
+or
+git rm -A // to remove all files in the project and subdirectories
+or
+git rm --cached <file> // to remove a file from the staging area but keep it in the index
+or
+git rm -rf <file> // to remove a file from the staging area and from the index
+or
+git rm -rf . // to remove all files in the project and subdirectories
+or
+git rm -rf -A // to remove all files in the project and subdirectories
+or
+git rm -rf --cached <file> // to remove a file from the staging area but keep it in the index
+or
+git rm -rf --cached . // to remove all files in the project and subdirectories
+or
+git rm -rf --cached -A // to remove all files in the project and subdirectories and untracked files
+
+// to commit changes to the staging area
 git commit -m "message"
+
+// to ignore a file from the commit
+echo "file name" >> .gitignore
+
+// to pull changes from the remote repository
+git pull origin <branch name>
 
 // to push the changes to the remote repository
 git push -u origin <branch> // -u to update the remote branch
@@ -51,3 +64,26 @@ git push -u origin <branch> // -u to update the remote branch
 // how to show history of the commits
 git log
 
+
+// to show the current branch
+git branch
+
+// to create a new branch
+git branch <branch name>
+
+// to create and switch to a branch
+git checkout <branch name>
+
+// to check the status of the git repository
+// shows the uncommitted files and untracked files and the branches
+git status  
+// show short status of the git repository
+git status -s
+// M to show the modified files
+// A to show the added files
+// D to show the deleted files
+// ?? to show the untracked files
+
+// to marge content between branches
+git merge <branch name> // it remains in the current branch
+// this makes new commit with the merged content
